@@ -15,47 +15,47 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="388"
+            android:layout_height="388dp"
             android:layout_weight="0"
             android:gravity="center|end"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/basicCalculatorButton"
                 android:layout_width="wrap_content"
                 android:layout_height="132dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Basic Calculator" />
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/unitConverterButton"
                 android:layout_width="wrap_content"
                 android:layout_height="132dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Unit Converter" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="395dp"
+            android:layout_height="250dp"
             android:layout_weight="0"
             android:gravity="center"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button9"
+                android:id="@+id/chemConverterButton"
                 android:layout_width="wrap_content"
                 android:layout_height="132dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Chem Converter" />
 
             <Button
-                android:id="@+id/button10"
+                android:id="@+id/projectileCalcButton"
                 android:layout_width="wrap_content"
                 android:layout_height="132dp"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:text="Projectile Motion" />
 
         </LinearLayout>
 
