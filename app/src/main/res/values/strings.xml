@@ -2,5 +2,5 @@
     <string name="app_name">ValueConverter</string>
     <string name="title_activity_calc">CalcActivity</string>
     <string name="btn7">7</string>
-    <string name="calcResult">Your answer here</string>
+    <string name="calcResult"></string>
 </resources>
