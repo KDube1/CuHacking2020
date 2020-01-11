@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">ValueConverter</string>
+    <string name="enter_value">Enter Value</string>
+    <string name="unit_prompt">Choose A Unit</string>
+    <string-array name="ChemDropDown">
+        <item> K</item>
+        <item> °C</item>
+        <item> °F</item>
+        <item> torr</item>
+        <item> atm</item>
+        <item> mmHg</item>
+        <item> KPa</item>
+        <item> psi</item>
+        <item> pH</item>
+        <item> pOH</item>
+        <item> [H⁺]</item>
+        <item> [OH⁻]</item>
+    </string-array>
 </resources>
