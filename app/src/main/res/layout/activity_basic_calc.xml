@@ -19,7 +19,7 @@
             android:id="@+id/resultEdit"
             android:layout_width="398dp"
             android:layout_height="59dp"
-            android:text="TextView" />
+            android:text="@string/calcResult" />
 
         <LinearLayout
             android:id="@+id/ButtonRow01"
