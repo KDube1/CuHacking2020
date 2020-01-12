@@ -16,47 +16,47 @@ public class PhysicsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_physics);
     }
 
-    private double getVelocity(View view){
-        TextView eText = (TextView) findViewById(R.id.VelocityEdit);
+    private double getVelocity(){
+        TextView eText = findViewById(R.id.VelocityEdit);
         velocity = Double.parseDouble(eText.getText().toString());
         return velocity;
     }
 
-    private double getAngle(View view){
-        TextView eText = (TextView) findViewById(R.id.AngleEdit);
+    private double getAngle(){
+        TextView eText = findViewById(R.id.AngleEdit);
         angle = Double.parseDouble(eText.getText().toString());
         return angle;
     }
 
-    private double getHeight1(View view){
-        TextView eText = (TextView) findViewById(R.id.HeightEdit);
+    private double getHeight1(){
+        TextView eText = findViewById(R.id.HeightEdit);
         height1 = Double.parseDouble(eText.getText().toString());
         return height1;
     }
 
-    private double calculateTime(View view){
-        double t = -getVelocity(view)*Math.sin(getAngle(view)*(Math.PI/180)) + Math.sqrt(Math.pow(getVelocity(view)*Math.sin(getAngle(view)*(Math.PI/180)),2) - 2*(-9.81)*(getHeight1(view)));
-        TextView eText = (TextView) findViewById(R.id.Time);
-        eText.setText(Double.toString(t)+ " is the flight time");
+    private double calculateTime(){
+        double t = -getVelocity()*Math.sin(getAngle()*(Math.PI/180)) + Math.sqrt(Math.pow(getVelocity()*Math.sin(getAngle()*(Math.PI/180)),2) - 2*(-9.81)*(getHeight1()));
+        TextView eText = findViewById(R.id.Time);
+        eText.setText(t + " is the flight time");
         return t;
     }
 
-    private void calculateDistance(View view){
-        double d = getVelocity(view)*Math.cos(getAngle(view)*(Math.PI/180)*calculateTime(view));
-        TextView eText = (TextView) findViewById(R.id.Distance);
-        eText.setText(Double.toString(d)+ " is the distance travelled");
+    private void calculateDistance(){
+        double d = getVelocity()*Math.cos(getAngle()*(Math.PI/180)*calculateTime());
+        TextView eText = findViewById(R.id.Distance);
+        eText.setText(d + " is the distance travelled");
     }
 
-    private void calculateMaxHeight(View view){
-        double hMax = getHeight1(view) +(Math.pow(getVelocity(view),2)*Math.pow(Math.sin(getAngle(view)*(Math.PI/180)),2))/(2*9.81);
-        TextView eText = (TextView) findViewById(R.id.MaxHeight);
-        eText.setText(Double.toString(hMax) + " is the max height");
+    private void calculateMaxHeight(){
+        double hMax = getHeight1() +(Math.pow(getVelocity(),2)*Math.pow(Math.sin(getAngle()*(Math.PI/180)),2))/(2*9.81);
+        TextView eText = findViewById(R.id.MaxHeight);
+        eText.setText(hMax + " is the max height");
     }
 
     public void btnClick(View view){
-        calculateDistance(view);
-        calculateTime(view);
-        calculateMaxHeight(view);
+        calculateDistance();
+        calculateTime();
+        calculateMaxHeight();
     }
 
 
