@@ -17,7 +17,7 @@ public class ChemistryUnitConverterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chemistry_unit_converter);
 
-        Spinner spin = (Spinner) findViewById(R.id.spinner);
+        Spinner spin = (Spinner) findViewById(R.id.firstUnitSpinner);
         spin.setOnItemSelectedListener(new OnItemSelectedListener() {
 
             @Override

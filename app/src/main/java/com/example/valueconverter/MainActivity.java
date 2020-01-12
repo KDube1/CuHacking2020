@@ -15,10 +15,19 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button basicCalcButton = findViewById(R.id.basicCalculatorButton);
+        Button chemButton = findViewById((R.id.chemConverterButton));
        basicCalcButton.setOnClickListener((View v)->{
             Intent switchActivity = new Intent(this, BasicCalcActivity.class);
             startActivity(switchActivity);
         });
+
+        chemButton.setOnClickListener((View v)->{
+            Intent switchActivity = new Intent(this,ChemistryUnitConverterActivity.class);
+            startActivity(switchActivity);
+        });
+
+
+
     }
 
 
