@@ -4,16 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChemistryUnitConverterActivity">
+    tools:context=".SIconverter">
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,11 +17,12 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="84dp">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/chemInputText"
+                    android:id="@+id/InputNumber"
                     android:layout_width="match_parent"
                     android:layout_height="78dp"
                     android:hint="@string/enter_value" />
@@ -34,73 +31,113 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="From" />
 
         <RadioGroup
-            android:id="@+id/pressureUnitRadioGroup"
+            android:id="@+id/OriginalUnit"
             android:layout_width="match_parent"
             android:layout_height="20dp"
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radioButton3"
+                android:id="@+id/radioButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Pascals" />
+                android:text="cm" />
 
             <RadioButton
-                android:id="@+id/radioButton4"
+                android:id="@+id/radioButton2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Torr" />
+                android:text="m" />
 
             <RadioButton
-                android:id="@+id/radioButton5"
+                android:id="@+id/radioButton6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Atmospheres" />
+                android:text="km" />
 
+            <RadioButton
+                android:id="@+id/radioButton7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="in" />
+
+            <RadioButton
+                android:id="@+id/radioButton8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ft" />
+
+            <RadioButton
+                android:id="@+id/radioButton9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="mi" />
         </RadioGroup>
 
         <TextView
-            android:id="@+id/toTextView"
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="To " />
+            android:text="To" />
 
         <RadioGroup
-            android:id="@+id/convertRadioGroup"
+            android:id="@+id/NewUnit"
             android:layout_width="match_parent"
             android:layout_height="120dp"
             android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/pascalToButton"
+                android:id="@+id/radioButton10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Pascals" />
+                android:text="cm" />
 
             <RadioButton
-                android:id="@+id/TorrToButton"
+                android:id="@+id/radioButton11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Torr" />
+                android:text="m" />
 
             <RadioButton
-                android:id="@+id/atmosphereToButton"
+                android:id="@+id/radioButton12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Atmospheres" />
+                android:text="km" />
 
+            <RadioButton
+                android:id="@+id/radioButton13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="in" />
+
+            <RadioButton
+                android:id="@+id/radioButton14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ft" />
+
+            <RadioButton
+                android:id="@+id/radioButton15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="mi" />
         </RadioGroup>
 
         <Button
@@ -111,7 +148,7 @@
             android:text="Go!" />
 
         <TextView
-            android:id="@+id/convertResultText"
+            android:id="@+id/SIresultText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="final result" />
