@@ -159,7 +159,7 @@ public class SIconverter extends AppCompatActivity{
                     convertedText.setText(Double.toString(converted));
                 }
                 else if (convertTypeTo.equals("m")) {
-                    double converted = original * 3.821;
+                    double converted = original / 3.821;
                     TextView convertedText = (TextView) findViewById(R.id.SIresultText);
                     convertedText.setText(Double.toString(converted));
                 }
