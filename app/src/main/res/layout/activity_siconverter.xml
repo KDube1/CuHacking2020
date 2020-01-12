@@ -17,11 +17,12 @@
             android:orientation="horizontal">
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/InputNumber"
+
                 android:layout_width="match_parent"
                 android:layout_height="84dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/InputNumber"
                     android:layout_width="match_parent"
                     android:layout_height="78dp"
                     android:hint="@string/enter_value" />
