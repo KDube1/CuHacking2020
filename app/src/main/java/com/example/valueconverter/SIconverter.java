@@ -9,7 +9,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.view.Menu;
 
-public class SIconverter extends AppCompatActivity {
+public class SIconverter extends AppCompatActivity{
     String convertTypeFrom;
     String convertTypeTo;
     TextView valueEntered;
@@ -159,7 +159,7 @@ public class SIconverter extends AppCompatActivity {
                     convertedText.setText(Double.toString(converted));
                 }
                 else if (convertTypeTo.equals("m")) {
-                    double converted = original / 3.821;
+                    double converted = original * 3.821;
                     TextView convertedText = (TextView) findViewById(R.id.SIresultText);
                     convertedText.setText(Double.toString(converted));
                 }
