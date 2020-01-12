@@ -138,10 +138,6 @@ public class BasicCalcActivity extends AppCompatActivity {
             double result = 0;
             if(optr == Operator.add){
                 result = data1+ data2;
-                dbTime.put("timestamp",LocalDateTime.now()
-                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
-
-
                 eqnToSend = Double.toString(data1) + " + " + Double.toString(data2) + " = " +
                         Double.toString(result);
                 String uniqueID = UUID.randomUUID().toString();
@@ -161,6 +157,8 @@ public class BasicCalcActivity extends AppCompatActivity {
                             }
                         });
 
+                dbTime.put("timestamp",LocalDateTime.now()
+                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
                 db.collection("calculations").document(uniqueID)
                         .update(dbTime)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -197,6 +195,22 @@ public class BasicCalcActivity extends AppCompatActivity {
                                 Log.w(TAG, "Error writing document", e);
                             }
                         });
+                dbTime.put("timestamp",LocalDateTime.now()
+                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
+                db.collection("calculations").document(uniqueID)
+                        .update(dbTime)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "DocumentSnapshot successfully written!");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error writing document", e);
+                            }
+                        });
 
             } else if (optr == Operator.multiply){
                 result = data1*data2;
@@ -218,6 +232,24 @@ public class BasicCalcActivity extends AppCompatActivity {
                                 Log.w(TAG, "Error writing document", e);
                             }
                         });
+
+                dbTime.put("timestamp",LocalDateTime.now()
+                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
+                db.collection("calculations").document(uniqueID)
+                        .update(dbTime)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "DocumentSnapshot successfully written!");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error writing document", e);
+                            }
+                        });
+
             } else if (optr ==  Operator.divide){
                 result = data1/data2;
                 eqnToSend = Double.toString(data1) + " / " + Double.toString(data2) + " = " +
@@ -226,6 +258,23 @@ public class BasicCalcActivity extends AppCompatActivity {
                 sendToDB.put("equation", eqnToSend);
                 db.collection("calculations").document(uniqueID)
                         .set(sendToDB)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "DocumentSnapshot successfully written!");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Log.w(TAG, "Error writing document", e);
+                            }
+                        });
+
+                dbTime.put("timestamp",LocalDateTime.now()
+                        .format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
+                db.collection("calculations").document(uniqueID)
+                        .update(dbTime)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
