@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
             Intent switchActivity = new Intent(this, BasicCalcActivity.class);
             startActivity(switchActivity);
         });
+
         Button unitConverterButton = findViewById(R.id.unitConverterButton);
         unitConverterButton.setOnClickListener((View v)->{
             Intent switchActivity = new Intent(this, SIconverter.class);
@@ -32,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
+       Button projectileCalcButton = findViewById(R.id.projectileCalcButton);
+        projectileCalcButton.setOnClickListener((View v)->{
+           Intent switchActivity = new Intent(this, PhysicsActivity.class);
+           startActivity(switchActivity);
+        });
 
     }
 

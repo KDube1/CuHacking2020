@@ -12,6 +12,7 @@
         <activity android:name=".CalcHistoryActivity"></activity>
         <activity android:name=".SIconverter"></activity>
         <activity android:name=".ChemistryUnitConverterActivity" />
+        <activity android:name=".PhysicsActivity"></activity>
         <activity android:name=".BasicCalcActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
