@@ -25,6 +25,7 @@
                 android:layout_height="84dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/chemInputText"
                     android:layout_width="match_parent"
                     android:layout_height="78dp"
                     android:hint="@string/enter_value" />

@@ -32,18 +32,54 @@ public class ChemistryUnitConverterActivity extends AppCompatActivity {
         RadioGroup toRadio = findViewById(R.id.convertRadioGroup);
         convertTypeTo = ((RadioButton) findViewById(toRadio.getCheckedRadioButtonId())).getText().toString().toLowerCase();
         TextView resultText = findViewById(R.id.convertResultText);
+        TextView convertValue = findViewById(R.id.chemInputText);
+        Double resultValue = Double.parseDouble(convertValue.getText().toString());
         switch(convertTypeFrom){
             case "torr":
-                if (convertTypeTo.equals("torr")){
-                    resultText.setText("Bitch thats the same unit");
+                if (convertTypeTo.equals("torr")) {
+                    resultText.setText("You are converting the same unit");
+
+                }else if (convertTypeTo.equals("pascals")) {
+                    double returnValue = resultValue*133.322;
+                    resultText.setText("" + returnValue);
+                }else if (convertTypeTo.equals("atmospheres")) {
+                    double returnValue = resultValue*0.00131579;
+                    resultText.setText("" + returnValue);
                 }
+                break;
+            case "pascals":
+                if (convertTypeTo.equals("pascals")) {
+                    resultText.setText("You are converting the same unit");
+                } else if (convertTypeTo.equals("torr")){
+                    double returnValue = resultValue * 0.007501;
+                    resultText.setText("" + returnValue);
+                } else if (convertTypeTo.equals("atmospheres")) {
+                    double returnValue = resultValue /101325;
+                    resultText.setText("" + returnValue);
+                }
+                break;
+            case "atmospheres":
+                if (convertTypeTo.equals("atmospheres")) {
+                    resultText.setText("You are converting the same unit");
+                } else if (convertTypeTo.equals("torr")) {
+                    double returnValue = resultValue * 760;
+                    resultText.setText("" + returnValue);
+                } else if (convertTypeTo.equals("pascals")) {
+                    double returnValue = resultValue * 101325;
+                    resultText.setText("" + returnValue);
+                }
+                break;
         }
+
+
     }
 
-
-
-
 }
+
+
+
+
+
 
 
 
