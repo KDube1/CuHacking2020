@@ -19,6 +19,12 @@ public class MainActivity extends AppCompatActivity {
             Intent switchActivity = new Intent(this, BasicCalcActivity.class);
             startActivity(switchActivity);
         });
+
+       Button projectileCalcButton = findViewById(R.id.projectileCalcButton);
+        projectileCalcButton.setOnClickListener((View v)->{
+           Intent switchActivity = new Intent(this, PhysicsActivity.class);
+           startActivity(switchActivity);
+        });
     }
 
 
