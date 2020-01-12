@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "279075781744",
+    "firebase_url": "https://cuhacking2020-ad167.firebaseio.com",
+    "project_id": "cuhacking2020-ad167",
+    "storage_bucket": "cuhacking2020-ad167.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279075781744:android:9afdee7d1f6004f0cf88b5",
+        "android_client_info": {
+          "package_name": "com.example.valueconverter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "279075781744-v2s1jigivkhdom08cb67r92b4i6uqg4n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.valueconverter",
+            "certificate_hash": "b74310250cce6899761da8021f3c049fcb45523a"
+          }
+        },
+        {
+          "client_id": "279075781744-ktfcoj4nrpcbcmka4vi8k25ilighaqni.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-D8KpwbBhktZ3T7CE-G_23U99FnmG3SU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "279075781744-ktfcoj4nrpcbcmka4vi8k25ilighaqni.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
