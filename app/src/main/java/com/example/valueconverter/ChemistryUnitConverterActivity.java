@@ -9,6 +9,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.math.*;
@@ -28,12 +29,14 @@ public class ChemistryUnitConverterActivity extends AppCompatActivity {
     public void goConvert(View view){
         RadioGroup typeRadio = findViewById(R.id.pressureUnitRadioGroup);
         convertTypeFrom = ((RadioButton) findViewById(typeRadio.getCheckedRadioButtonId())).getText().toString().toLowerCase();
-
+        RadioGroup toRadio = findViewById(R.id.convertRadioGroup);
+        convertTypeTo = ((RadioButton) findViewById(toRadio.getCheckedRadioButtonId())).getText().toString().toLowerCase();
+        TextView resultText = findViewById(R.id.convertResultText);
         switch(convertTypeFrom){
             case "torr":
-                Toast toast=Toast. makeText(getApplicationContext(),"this shit works",Toast. LENGTH_SHORT);
-                toast. setMargin(50,50);
-                toast. show();
+                if (convertTypeTo.equals("torr")){
+                    resultText.setText("Bitch thats the same unit");
+                }
         }
     }
 
