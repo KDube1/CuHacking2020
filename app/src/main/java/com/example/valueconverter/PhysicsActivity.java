@@ -35,20 +35,20 @@ public class PhysicsActivity extends AppCompatActivity {
     }
 
     private double calculateTime(){
-        double t = -getVelocity()*Math.sin(getAngle()*(Math.PI/180)) + Math.sqrt(Math.pow(getVelocity()*Math.sin(getAngle()*(Math.PI/180)),2) - 2*(-9.81)*(getHeight1()));
+        double t = (-1*getVelocity()*Math.sin(getAngle()*(180/Math.PI)) + Math.sqrt(Math.pow(getVelocity()*Math.sin(getAngle()*(180/Math.PI)),2) - 2*(-9.81)*(getHeight1())))/-9.81;
         TextView eText = findViewById(R.id.Time);
         eText.setText(t + " is the flight time");
         return t;
     }
 
     private void calculateDistance(){
-        double d = getVelocity()*Math.cos(getAngle()*(Math.PI/180)*calculateTime());
+        double d = getVelocity()*Math.cos(getAngle()*(180/Math.PI)*calculateTime());
         TextView eText = findViewById(R.id.Distance);
         eText.setText(d + " is the distance travelled");
     }
 
     private void calculateMaxHeight(){
-        double hMax = getHeight1() +(Math.pow(getVelocity(),2)*Math.pow(Math.sin(getAngle()*(Math.PI/180)),2))/(2*9.81);
+        double hMax = getHeight1() +(Math.pow(getVelocity(),2)*Math.pow(Math.sin(getAngle()*(180/Math.PI)),2))/(2*9.81);
         TextView eText = findViewById(R.id.MaxHeight);
         eText.setText(hMax + " is the max height");
     }
