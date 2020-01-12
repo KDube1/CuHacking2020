@@ -16,4 +16,7 @@
         <item> [H⁺]</item>
         <item> [OH⁻]</item>
     </string-array>
+    <string name="title_activity_calc">CalcActivity</string>
+    <string name="btn7">7</string>
+    <string name="calcResult"></string>
 </resources>
