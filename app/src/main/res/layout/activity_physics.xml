@@ -23,33 +23,36 @@
         android:orientation="vertical">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/VelocityEdit"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/VelocityEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Velocity (m/s)" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/AngleEdit"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/AngleEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Angle (deg)" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/HeightEdit"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/HeightEdit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Initial Height (m)" />
