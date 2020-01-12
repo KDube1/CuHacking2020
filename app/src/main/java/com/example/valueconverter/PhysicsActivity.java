@@ -8,7 +8,7 @@ import java.lang.Math;
 
 public class PhysicsActivity extends AppCompatActivity {
 
-    private double velocity = 0, angle = 0, height1 = 0;
+    private double velocity = 0.0, angle = 0.0, height1 = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,25 +32,22 @@ public class PhysicsActivity extends AppCompatActivity {
     }
 
     private double calculateTime(View view){
-        double t = 0;
-        t = -velocity*Math.sin(angle*(Math.PI/180)) + Math.sqrt(Math.pow(velocity*Math.sin(angle*(Math.PI/180)),2) - 2*(-9.81)*(height1));
+        double t = -velocity*Math.sin(angle*(Math.PI/180)) + Math.sqrt(Math.pow(velocity*Math.sin(angle*(Math.PI/180)),2) - 2*(-9.81)*(height1));
         TextView eText = (TextView) findViewById(R.id.Time);
         eText.setText(Double.toString(t)+ " is the flight time");
         return t;
     }
 
     private void calculateDistance(View view){
-        double d = 0;
-        d = velocity*Math.cos(angle*(Math.PI/180)*calculateTime(view));
+        double d = velocity*Math.cos(angle*(Math.PI/180)*calculateTime(view));
         TextView eText = (TextView) findViewById(R.id.Distance);
         eText.setText(Double.toString(d)+ " is the distance travelled");
     }
 
     private void calculateMaxHeight(View view){
-        double hmax = 0;
-        hmax = (Math.pow(velocity,2)*Math.pow(Math.sin(angle*(Math.PI/180)),2))/(2*9.81);
+        double hMax = (Math.pow(velocity,2)*Math.pow(Math.sin(angle*(Math.PI/180)),2))/(2*9.81);
         TextView eText = (TextView) findViewById(R.id.MaxHeight);
-        eText.setText(Double.toString(hmax) + " is the max height");
+        eText.setText(Double.toString(hMax) + " is the max height");
     }
 
     public void btnClick(View view){
